@@ -1,0 +1,158 @@
+/************************ BASE ************************/
+.ovrly(@color)
+{
+    position: relative;
+    z-index: 1;
+
+    &:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+}
+
+
+/************************ HORIZONTAL ************************/
+.ovrly-horizontal(@color: #333)
+{
+    .ovrly(@color);
+    &:after{
+        background-size: 3px 3px;
+        .lh-background-image(
+            linear-gradient(
+                0deg,
+                rgba(red(@color), green(@color), blue(@color), .5) 1.7px,
+                rgba(red(@color), green(@color), blue(@color), .9) 1.7px,
+                rgba(red(@color), green(@color), blue(@color), .9) 3px,
+                rgba(red(@color), green(@color), blue(@color), .5) 3px
+            )
+        );
+    }
+}
+
+.ovrly-horizontal{ .ovrly-horizontal(); }
+
+
+/************************ VERTICAL ************************/
+.ovrly-vertical(@color: #333)
+{
+    .ovrly(@color);
+    &:after{
+        background-size: 3px 3px;        
+        .lh-background-image(
+            linear-gradient(
+                90deg,
+                rgba(red(@color), green(@color), blue(@color), .5) 1.7px,
+                rgba(red(@color), green(@color), blue(@color), .9) 1.7px,
+                rgba(red(@color), green(@color), blue(@color), .9) 3px,
+                rgba(red(@color), green(@color), blue(@color), .5) 3px
+            )
+        );
+    }
+}
+
+.ovrly-vertical{ .ovrly-vertical(); }
+
+
+/************************ DIAGONAL LEFT ************************/
+.ovrly-diagonal-left(@color: #333)
+{
+    .ovrly(@color);
+    &:after{
+        background-size: 4px 4px;        
+        .lh-background-image(
+            linear-gradient(
+                45deg,
+                rgba(red(@color), green(@color), blue(@color), .9) 0px,
+                rgba(red(@color), green(@color), blue(@color), .9) 0px,
+                rgba(red(@color), green(@color), blue(@color), .9) .7px,
+                rgba(red(@color), green(@color), blue(@color), .5) .7px,
+
+                rgba(red(@color), green(@color), blue(@color), .5) 2.2px,
+                rgba(red(@color), green(@color), blue(@color), .9) 2.2px,
+                rgba(red(@color), green(@color), blue(@color), .9) 3.5px,
+                rgba(red(@color), green(@color), blue(@color), .5) 3.5px,
+
+                rgba(red(@color), green(@color), blue(@color), .5) 5px,
+                rgba(red(@color), green(@color), blue(@color), .9) 5px,
+                rgba(red(@color), green(@color), blue(@color), .9) 6px,
+                rgba(red(@color), green(@color), blue(@color), .9) 6px
+            )
+        );
+    }
+}
+
+.ovrly-diagonal-left{ .ovrly-diagonal-left(); }
+
+
+/************************ DIAGONAL RIGHT ************************/
+.ovrly-diagonal-right(@color: #333)
+{
+    .ovrly(@color);
+    &:after{
+        background-size: 4px 4px;        
+        .lh-background-image(
+            linear-gradient(
+                135deg,
+                rgba(red(@color), green(@color), blue(@color), .9) 0px,
+                rgba(red(@color), green(@color), blue(@color), .9) 0px,
+                rgba(red(@color), green(@color), blue(@color), .9) .7px,
+                rgba(red(@color), green(@color), blue(@color), .5) .7px,
+
+                rgba(red(@color), green(@color), blue(@color), .5) 2.2px,
+                rgba(red(@color), green(@color), blue(@color), .9) 2.2px,
+                rgba(red(@color), green(@color), blue(@color), .9) 3.5px,
+                rgba(red(@color), green(@color), blue(@color), .5) 3.5px,
+
+                rgba(red(@color), green(@color), blue(@color), .5) 5px,
+                rgba(red(@color), green(@color), blue(@color), .9) 5px,
+                rgba(red(@color), green(@color), blue(@color), .9) 6px,
+                rgba(red(@color), green(@color), blue(@color), .9) 6px
+            )
+        );
+    }
+}
+
+.ovrly-diagonal-right{ .ovrly-diagonal-right(); }
+
+
+/************************ PIXEL ************************/
+.ovrly-pixel(@color: #333)
+{
+    .ovrly(@color);
+    &:after{
+        background-size: 4px 4px;        
+        .lh-background-image(
+            linear-gradient(
+                0deg,
+                rgba(red(@color), green(@color), blue(@color), .45) 0px,
+                rgba(red(@color), green(@color), blue(@color), .45) 0px,
+                rgba(red(@color), green(@color), blue(@color), .45) 1.7px,
+                rgba(red(@color), green(@color), blue(@color), .25) 1.7px,
+
+                rgba(red(@color), green(@color), blue(@color), .25) 3.7px,
+                rgba(red(@color), green(@color), blue(@color), .45) 3.7px,
+                rgba(red(@color), green(@color), blue(@color), .45) 4px,
+                rgba(red(@color), green(@color), blue(@color), .45) 4px
+            ),
+            linear-gradient(
+                90deg,
+                rgba(red(@color), green(@color), blue(@color), .45) 0px,
+                rgba(red(@color), green(@color), blue(@color), .45) 0px,
+                rgba(red(@color), green(@color), blue(@color), .45) 1.7px,
+                rgba(red(@color), green(@color), blue(@color), .25) 1.7px,
+
+                rgba(red(@color), green(@color), blue(@color), .25) 3.7px,
+                rgba(red(@color), green(@color), blue(@color), .45) 3.7px,
+                rgba(red(@color), green(@color), blue(@color), .45) 4px,
+                rgba(red(@color), green(@color), blue(@color), .45) 4px
+            )
+        );
+    }
+}
+
+.ovrly-pixel{ .ovrly-pixel(); }

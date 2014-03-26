@@ -1,0 +1,17 @@
+{
+  "name": "ovrly",
+  "version": "0.0.1",
+  "authors": [
+    "Wahyu Kristianto <w.kristories@gmail.com>"
+  ],
+  "keywords": [
+    "overlay",
+    "css",
+    "pattern"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Kristories/ovrly",
+  "dependencies": {
+    "lesshat": "~2.0.15"
+  }
+}
