@@ -1,0 +1,23 @@
+{
+  "name": "ovrly",
+  "description": "Overlaying images with CSS",
+  "version": "0.0.2",
+  "main": [
+    "css",
+    "less"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "overlay",
+    "css",
+    "pattern"
+  ],
+  "authors": [
+    "Wahyu Kristianto <w.kristories@gmail.com>"
+  ],
+  "homepage": "https://github.com/Kristories/ovrly",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Kristories/ovrly.git"
+  }
+}
