@@ -57,7 +57,7 @@ Default color is `#333333`, but you can change `ovrly` color from [here](http://
 
 ## Contributing
 
-- Use **[OVRLY Generator](#)** to generate your PNG OVRLY
+- Use **[OVRLY Generator](http://kristories.github.io/ovrly/generator)** to generate your PNG OVRLY
 - Maximum PNG size `100 x 100` px
 - Opacity `10%` & `20%`
 
