@@ -1,0 +1,58 @@
+<div id="page-contribution" class="page">
+    <div class="container">
+        <div class="page-header">
+            <h1>Contribution</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <ul>
+                    <li>Use <strong>OVRLY Generator</strong> to generate your pattern</li>
+                    <li>Use <code>.png</code> format</li>
+                    <li>Maximum <code>.png</code> size <code>100 x 100</code> px</li>
+                    <li>Use opacity up to <code>30%</code></li>
+                </ul>
+
+                <hr>
+
+                <h4>Example PNG</h4>
+                <img src="/assets/img/example/example.png">
+
+                <h4>Example PSD</h4>
+                <p>Download <strong><a href="/assets/img/example/example.psd">example.psd</a></strong></p>
+            </div>
+
+            <div class="col-md-6">
+                <div id="ovrly-generator" class="ovrly-pixel">
+                    <h4>OVRLY Generator</h4>
+                    <div class="well">
+                        <form class="form" action="#">
+                            <div class="form-group">
+                                <input type="file" class="form-control" id="upload">
+                            </div>
+                            <button id="generate-button" type="button" class="btn btn-primary">Generate</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="generate-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">OVRLY Generator</h4>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="form-control" id="ovrly-name" name="ovrly-name" placeholder="OVRLY name" value="">
+                <hr>
+                <pre id="output"></pre>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

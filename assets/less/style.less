@@ -1,0 +1,195 @@
+@import "../vendor/bootstrap/less/bootstrap";
+@import "../vendor/lesshat/build/lesshat-prefixed";
+@import "https://raw.githubusercontent.com/Kristories/ovrly/master/less/ovrly";
+@import "http://jmblog.github.io/color-themes-for-google-code-prettify/css/themes/tomorrow-night-eighties.css";
+
+@container-lg: @container-md;
+
+html, body {
+    height: 100%;
+    background-color: #f5f5f5;
+}
+
+.center-outer{
+    display: table;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+
+    .center-inner {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+}
+
+#ovrly-generator{
+    padding: 100px 15px;
+    text-align: center;
+    background-color: #333;
+    background-image: url('../img/demo.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    .lh-background-size(cover);
+    .lh-border-radius(5px);
+    overflow: hidden;
+
+    .well{
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+    }
+}
+
+#ovrly-generator{
+    color: #fff;
+}
+.prettyprint{
+    overflow: auto;
+    word-wrap: normal;
+    white-space: pre;
+}
+#generate-modal, #generator-modal{
+    pre{
+        overflow: auto;
+        word-wrap: normal;
+        white-space: pre;
+    }
+}
+
+#menu{
+    height: 52px;
+    position: relative;
+    z-index: 999;
+    
+    #menu-fix{
+        .navbar{
+            .navbar-default;
+            .lh-border-radius(0);
+        }
+
+        &.affix{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+        }
+    }
+}
+
+.page{
+    padding: 50px 0;
+    min-height: 600px;
+}
+
+#page-hello{
+    height: 100%;
+    .ovrly-pixel();
+    margin: 0;
+    color: #fff;
+    text-shadow: 1px 1px 3px #333;
+    background-image: url('../img/cover.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    .lh-background-size(cover);
+    background-attachment: fixed;
+}
+
+#page-getting-started{
+    
+}
+
+#page-installation{
+    
+}
+
+.demo{
+    text-align: center;
+    background-image: url('../img/demo.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    .lh-background-size(cover);
+    font-family: @font-family-monospace;
+    height: 150px;
+    line-height: 150px;
+    color: #fff;
+    text-shadow: 1px 1px 3px #000;
+    margin: 15px 0;
+}
+
+.demos-container {
+    width:100%;
+    max-width:200px;
+    max-height: 200px;
+    margin: 15px auto;
+
+    .demos {
+        width:100%;
+        background-position: center;
+        background:url('../img/demo.jpg');
+        background-repeat: no-repeat;
+        .lh-background-size(cover);
+        padding-bottom:100%;
+    }
+}
+
+.demos{
+    text-align: center;
+    background-image: url('../img/demo.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    .lh-background-size(cover);
+    font-family: @font-family-monospace;
+    height: 200px;
+    line-height: 200px;
+    color: #fff;
+    text-shadow: 1px 1px 3px #000;
+    margin: 15px 0;
+}
+
+.demo-ovrly-pixel{
+    .ovrly-pixel();
+}
+
+.demo-ovrly-horizontal{
+    .ovrly-horizontal();
+}
+
+.demo-ovrly-vertical{
+    .ovrly-vertical();
+}
+
+.demo-ovrly-diagonal-left{
+    .ovrly-diagonal-left();
+}
+
+.demo-ovrly-diagonal-right{
+    .ovrly-diagonal-right();
+}
+
+
+
+.demo-ovrly-pixel-color{
+    .ovrly-diagonal-right(#A192C9);
+}
+
+.demo-ovrly-horizontal-color{
+    .ovrly-horizontal(#583E7E);
+}
+.demo-ovrly-vertical-color{
+    .ovrly-vertical(#00B5F1);
+}
+.demo-ovrly-diagonal-left-color{
+    .ovrly-diagonal-left(#ED5821);
+}
+.demo-ovrly-diagonal-right-color{
+    .ovrly-diagonal-right(#A192C9);
+}
+
+#footer{
+    padding: 40px 0;
+    background-color: #333;
+    .ovrly-pixel();
+    color: #aaa;
+    font-size: 12px;
+    text-align: center;
+}

@@ -10,6 +10,7 @@
 
     <title>OVRLY</title>
     <link href="assets/css/style.css" rel="stylesheet">
+    <style type="text/css" id="custom-ovrly"></style>
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -19,150 +20,288 @@
 
 <body>
 
-    <div id="pages">
-
-        <section id="page-welcome">
-            <div class="center-outer">
-                <div class="center-inner">
-                    <div class="container">
-
-                        <h1>OVRLY</h1>
-
-                        <div class="row">
-                            <div class="col-md-6 col-md-offset-3">
-                                <p>
-                                    Overlaying images with CSS
-                                </p>
-                            </div>
-                            <div class="col-md-4 col-md-offset-4">
-                                <div class="well">
-                                    <iframe src="http://ghbtns.com/github-btn.html?user=Kristories&repo=ovrly&type=watch&size=large"
-                                    allowtransparency="true" frameborder="0" scrolling="0" width="81" height="30"></iframe>
-
-                                    <iframe src="http://ghbtns.com/github-btn.html?user=Kristories&repo=ovrly&type=fork&size=large"
-                                    allowtransparency="true" frameborder="0" scrolling="0" width="81" height="30"></iframe>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+    <div id="page-hello">
+	<div class="center-outer">
+		<div class="center-inner">
+			<div class="container">
+				<h1>OVRLY</h1>
+				<p>Overlaying images with CSS</p>
+				<p><a class="btn btn-primary btn-lg" href="#page-getting-started">Learn more &raquo;</a></p>
+			</div>
+		</div>
+	</div>
+</div>
+    <div id="menu">
+    <div id="menu-fix">
+        <nav class="navbar" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#page-hello">OVRLY</a>
                 </div>
-            </div>
-        </section>
-
-        <section id="page-demo-basic">
-            <div class="center-outer">
-                <div class="center-inner">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h3 id="demo-basic" class="demo">BASIC</h3>
-                            </div>
-                            <div class="col-md-6">
-                                <h3 id="demo-basic-horizontal" class="demo">.ovrly-horizontal();</h3>
-                            </div>
-                            <div class="col-md-6">
-                                <h3 id="demo-basic-vertical" class="demo">.ovrly-vertical();</h3>
-                            </div>
-                            <div class="col-md-6">
-                                <h3 id="demo-basic-diagonal-left" class="demo">.ovrly-diagonal-left();</h3>
-                            </div>
-                            <div class="col-md-6">
-                                <h3 id="demo-basic-diagonal-right" class="demo">.ovrly-diagonal-right();</h3>
-                            </div>
-                            <div class="col-md-6">
-                                <h3 id="demo-basic-pixel" class="demo">.ovrly-pixel();</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="page-demo-color">
-            <div class="center-outer">
-                <div class="center-inner">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h3 id="demo-color" class="demo">COLOR</h3>
-                            </div>
-                            <div class="col-md-6">
-                                <h3 id="demo-color-horizontal" class="demo">.ovrly-horizontal(#FDBA4E);</h3>
-                            </div>
-                            <div class="col-md-6">
-                                <h3 id="demo-color-vertical" class="demo">.ovrly-vertical(#00B5F1);</h3>
-                            </div>
-                            <div class="col-md-6">
-                                <h3 id="demo-color-diagonal-left" class="demo">.ovrly-diagonal-left(#ED5821);</h3>
-                            </div>
-                            <div class="col-md-6">
-                                <h3 id="demo-color-diagonal-right" class="demo">.ovrly-diagonal-right(#A192C9);</h3>
-                            </div>
-                            <div class="col-md-6">
-                                <h3 id="demo-color-pixel" class="demo">.ovrly-pixel(#5FC5BA);</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="page-customize">
-            <div class="center-outer">
-                <div class="center-inner">
-                    <div class="container">
-                        <h1 class="title">Custom CSS Color</h1>
-
-                        <div class="row">
-                            <div class="col-md-4 col-md-offset-4">
-                                <p>Hex Color</p>
-                                <div class="well">
-
-                                    <div class="input-group">
-                                        <input type="text" id="custom-color" class="form-control" placeholder="#333333">
-                                        <span class="input-group-btn">
-                                            <button id="custom-download" class="btn btn-primary" type="button">Download</button>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="page-bye">
-            <div class="center-outer">
-                <div class="center-inner">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-4 col-md-offset-4">
-                                <p>
-                                    Designed and built by <a href="http://twitter.com/kristories">@kristories</a>.
-                                    Images by <a href="http://www.flickr.com/photos/epsos/">epsos.de</a>.<br>
-                                    Code licensed under <a href="http://opensource.org/licenses/mit-license.html">MIT License</a>. 
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </div>
-
-    <div class="modal fade" id="generator-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <h3 class="center-block">ovrly.min.css</h3>
-                    <pre id="generator-code"></pre>
-                </div>]
+                <ul class="nav navbar-nav pull-right">
+                    <li class="active"><a href="#page-getting-started">Getting Started</a></li>
+                    <li><a href="#page-installation">Installation</a></li>
+                    <li><a href="#page-usage">Usage</a></li>
+                    <li><a href="#page-patterns">Patterns</a></li>
+                    <li><a href="#page-contribution">Contribution</a></li>
+                </ul>
             </div>
         </div>
     </div>
+</div>
+    <div id="page-getting-started" class="page">
+	<div class="container">
+		
+		<div class="page-header">
+			<h1>Getting Started</h1>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				
+				<h3>Basic</h3>
+				<div class="row">
+					<div class="col-md-3">
+						<div class="demo demo-ovrly-vertical"></div>
+					</div>
+					<div class="col-md-3">
+						<div class="demo demo-ovrly-horizontal"></div>
+					</div>
+					<div class="col-md-3">
+						<div class="demo demo-ovrly-diagonal-left"></div>
+					</div>
+					<div class="col-md-3">
+						<div class="demo demo-ovrly-diagonal-right"></div>
+					</div>
+				</div>
+
+				<h3>Color</h3>
+				<div class="row">
+					<div class="col-md-3">
+						<div class="demo demo-ovrly-vertical-color"></div>
+					</div>
+					<div class="col-md-3">
+						<div class="demo demo-ovrly-horizontal-color"></div>
+					</div>
+					<div class="col-md-3">
+						<div class="demo demo-ovrly-diagonal-left-color"></div>
+					</div>
+					<div class="col-md-3">
+						<div class="demo demo-ovrly-diagonal-right-color"></div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		
+	</div>
+</div>
+    <div id="page-installation" class="page">
+	<div class="container">
+		<div class="page-header">
+			<h1>Installation</h1>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<h3>Bower</h3>
+				<p>Make sure you have bower installed or install it via npm <code>install -g bower</code>.</p>
+<code>console</code>
+<pre class="prettyprint lang-cli">
+bower install ovrly --save
+</pre>
+
+<code>less</code>
+<pre class="prettyprint lang-cli">
+@import "bower_components/ovrly/less/ovrly";
+</pre>
+			</div>
+			<div class="col-md-6">
+				<h3>Old School</h3>
+				<p>Download <strong><a href="https://raw.githubusercontent.com/Kristories/ovrly/master/css/ovrly.css">ovrly.css</a></strong> or <strong><a href="https://raw.githubusercontent.com/Kristories/ovrly/master/css/ovrly.min.css">ovrly.min.css</a></strong>.</p>
+<code>html</code>
+<pre class="prettyprint lang-html">
+&lt;link rel=&quot;stylesheet&quot; href=&quot;path/to/ovrly.css&quot;&gt;
+</pre>
+			</div>
+		</div>
+	</div>
+</div>
+    <div id="page-usage" class="page">
+    <div class="container">
+        <div class="page-header">
+            <h1>Usage</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Using LESS</h3>
+                <div class="row">
+                    <div class="col-md-12">
+<code>less</code>
+<pre class="prettyprint lang-css">
+.foo{
+    .ovrly-pixel();
+}
+
+.bar{
+    .ovrly-pixel(#ED5821);
+}
+</pre>
+
+<code>html</code>
+<pre class="prettyprint lang-html">
+&lt;div class=&quot;foo&quot;&gt;
+    OVRLY
+&lt;/div&gt;
+
+&lt;div class=&quot;bar&quot;&gt;
+    OVRLY with color
+&lt;/div&gt;
+</pre>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-6">
+                <h3>Using CSS</h3>
+                <div class="row">
+                    <div class="col-md-12">
+<code>html</code>
+<pre class="prettyprint lang-html">
+&lt;div class=&quot;ovrly-pixel&quot;&gt;
+    OVRLY
+&lt;/div&gt;
+</pre>
+                        <div class="well">
+                            <h4>Color</h4>
+                            <p>
+                                Default color is <code>#333333</code>, but you can change <code>.ovrly</code> color from here.
+                            </p>
+                            <div class="input-group">
+                                <input type="text" id="custom-color" class="form-control" placeholder="#333333">
+                                <span class="input-group-btn">
+                                    <button id="custom-download" class="btn btn-primary" type="button">Generate</button>
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="generator-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h3 class="center-block">ovrly.min.css</h3>
+                <pre id="generator-code"></pre>
+            </div>]
+        </div>
+    </div>
+</div>
+    <div id="page-patterns" class="page">
+	<div class="container">
+		<div class="page-header">
+			<h1>Patterns</h1>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="demo ovrly-horizontal">
+					ovrly-horizontal
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="demo ovrly-vertical">
+					ovrly-vertical
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="demo ovrly-diagonal-left">
+					ovrly-diagonal-left
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="demo ovrly-diagonal-right">
+					ovrly-diagonal-right
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="demo ovrly-pixel">
+					ovrly-pixel
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+    <div id="page-contribution" class="page">
+    <div class="container">
+        <div class="page-header">
+            <h1>Contribution</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <ul>
+                    <li>Use <strong>OVRLY Generator</strong> to generate your pattern</li>
+                    <li>Use <code>.png</code> format</li>
+                    <li>Maximum <code>.png</code> size <code>100 x 100</code> px</li>
+                    <li>Use opacity up to <code>30%</code></li>
+                </ul>
+
+                <hr>
+
+                <h4>Example PNG</h4>
+                <img src="/assets/img/example/example.png">
+
+                <h4>Example PSD</h4>
+                <p>Download <strong><a href="/assets/img/example/example.psd">example.psd</a></strong></p>
+            </div>
+
+            <div class="col-md-6">
+                <div id="ovrly-generator" class="ovrly-pixel">
+                    <h4>OVRLY Generator</h4>
+                    <div class="well">
+                        <form class="form" action="#">
+                            <div class="form-group">
+                                <input type="file" class="form-control" id="upload">
+                            </div>
+                            <button id="generate-button" type="button" class="btn btn-primary">Generate</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="generate-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">OVRLY Generator</h4>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="form-control" id="ovrly-name" name="ovrly-name" placeholder="OVRLY name" value="">
+                <hr>
+                <pre id="output"></pre>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="footer">
+	<div class="container">
+		<p>
+			Designed and built by <a href="http://twitter.com/kristories">@kristories</a>. Images by <a href="http://www.flickr.com/photos/epsos/">epsos.de</a><br>
+			Code licensed under <a href="https://github.com/Kristories/ovrly/blob/master/LICENSE.md">MIT License</a>.
+		</p>
+	</div>
+</div>
 
     <script type="text/javascript" src="assets/js/script.js"></script>
 
