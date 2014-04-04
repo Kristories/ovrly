@@ -1,3 +1,1 @@
-# OVRLY
-
-Overlaying images with CSS
+# [OVRLY](http://kristories.github.io/ovrly)

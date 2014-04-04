@@ -11,21 +11,22 @@ $.noConflict();
 
 jQuery(function(){
 
-	prettyPrint();
+    jQuery('a').smoothScroll();
+    jQuery('body').scrollspy({ target: '#menu .container' });
+
+    jQuery('#menu-fix').affix({
+        offset: {
+            top: jQuery('#page-hello').outerHeight(true)
+        }
+    });
+	
+    prettyPrint();
+
 	generate_ovrly_css();
+
 	jQuery("#upload").on("change", function() {
         generate_ovrly(this);
     });
-
-	jQuery('a').smoothScroll();
-
-	jQuery('#menu-fix').affix({
-		offset: {
-			top: jQuery('#page-hello').outerHeight(true)
-		}
-	});	
-
-	jQuery('body').scrollspy({ target: '#menu .container' });
 
 	jQuery("#custom-download").on('click', function(){
 		var custom_color 	= jQuery("#custom-color").val();
@@ -74,12 +75,32 @@ function generate_ovrly(e)
         var t = new FileReader;
         
         t.readAsDataURL(e.files[0]), t.onload = function(e) {
-        	var ovrly_default_name = "ovrly-custom";
-        	var ovrly_name = ovrly_default_name;
-        	var t = "." + ovrly_default_name;
-        	var n = '@ovrly-default-color: #333;\n.ovrly(@color: @ovrly-default-color, @img: "")\n{\n    position: relative;\n    z-index: 1;\n    &:after{\n        content: "";\n        position: absolute;\n        top: 0;\n        left: 0;\n        bottom: 0;\n        right: 0;\n        z-index: -1;\n        background-image: url(@img);\n        background-repeat: repeat;\n        background-color: rgba(red(@color), green(@color), blue(@color), 0.5);\n    }}';
-        	var i = '.ovrly-custom(@color: @ovrly-default-color)\n{\n    .ovrly(@color, "' + e.target.result + '");\n}\n' + t + "{ .ovrly-custom(); }";
-        	var r = n + i;
+            var ovrly_default_name  = "ovrly-custom";
+            var ovrly_name          = ovrly_default_name;
+            var t                   = "." + ovrly_default_name;
+            var base                = '@ovrly-default-color: #333;'
+                                    + '.ovrly(@color: @ovrly-default-color, @img: ""){'
+                                    + 'position: relative;'
+                                    + 'z-index: 1;'
+                                    +   '&:after{'
+                                    +   '    content: "";'
+                                    +   '    position: absolute;'
+                                    +   '    top: 0;'
+                                    +   '    left: 0;'
+                                    +   '    bottom: 0;'
+                                    +   '    right: 0;'
+                                    +   '    z-index: -1;'
+                                    +   '    background-image: url(@img);'
+                                    +   '    background-repeat: repeat;'
+                                    +   '    background-color: rgba(red(@color), green(@color), blue(@color), 0.5);'
+                                    +   '}'
+                                    + '}';
+            var pattern             = '.ovrly-custom(@color: @ovrly-default-color)\n'
+                                    + '{\n'
+                                    + '    .ovrly(@color, "' + e.target.result + '");\n'
+                                    + '}\n'
+                                    + t + '{ .ovrly-custom(); }';
+            var r                   = base + pattern;
 
         	// Parser LESS and replace r
             parser = new less.Parser({}), parser.parse(r, function(e, t) {
@@ -89,11 +110,11 @@ function generate_ovrly(e)
             // Create OVRLY class
             jQuery("#custom-ovrly").text(r);
 
-            // Change .ovrly-pixel to ovrly_default_name from #ovrly-generator
-            jQuery("#ovrly-generator").removeClass("ovrly-pixel").addClass(ovrly_default_name);
+            // Change .ovrly-plus to ovrly_default_name from #ovrly-generator
+            jQuery("#ovrly-generator").removeClass("ovrly-plus").addClass(ovrly_default_name);
 
             // Send data to #output
-            jQuery("#output").text(i);
+            jQuery("#output").text(pattern);
 
             // Open modal
             jQuery("#generate-button").on('click', function(){
@@ -103,7 +124,7 @@ function generate_ovrly(e)
             // Change OVRLY name
             jQuery("#ovrly-name").keyup(function() {
                 var e = "ovrly-" + jQuery("#ovrly-name").val();
-                jQuery("#output").text(i.split(ovrly_default_name).join(e))
+                jQuery("#output").text(pattern.split(ovrly_default_name).join(e))
             });
         }
     }
@@ -111,21 +132,21 @@ function generate_ovrly(e)
 
 function generate_ovrly_css()
 {
-	//jQuery('body').load('https://render.githubusercontent.com');
 	jQuery("#custom-download").on("click", function() {
         var e = jQuery("#custom-color").val(),
             t = /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(e),
             n = t ? e : "#333";
-        
-        //jQuery.support.cors = true;
+
         jQuery.ajax({
             url: "https://github.com/Kristories/ovrly/raw/master/less/ovrly.less",
             dataType: 'jsonp',
             success: function(e) {
-                e = e + "@ovrly-default-color:" + n + ";", parser = new less.Parser({}), parser.parse(e, function(e, t) {
-                    jQuery("#generator-modal").modal(), jQuery("#generator-code").text(t.toCSS({
+                var e = e + "@ovrly-default-color:" + n + ";"
+                var parser = new less.Parser();
 
-                    }))
+                parser.parse(e, function(e, t) {
+                    //jQuery("#generator-modal").modal();
+                    jQuery("body").text(t.toCSS());
                 })
             }
         });

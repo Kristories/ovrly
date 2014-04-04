@@ -1,6 +1,6 @@
 @import "../vendor/bootstrap/less/bootstrap";
 @import "../vendor/lesshat/build/lesshat-prefixed";
-@import "https://raw.githubusercontent.com/Kristories/ovrly/master/less/ovrly";
+@import "../vendor/ovrly/less/ovrly";
 @import "http://jmblog.github.io/color-themes-for-google-code-prettify/css/themes/tomorrow-night-eighties.css";
 
 @container-lg: @container-md;
@@ -26,23 +26,23 @@ html, body {
 #ovrly-generator{
     padding: 100px 15px;
     text-align: center;
-    background-color: #333;
-    background-image: url('../img/demo.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    .lh-background-size(cover);
+    background-color: #fff;
+    border: solid thin #ddd;
     .lh-border-radius(5px);
     overflow: hidden;
+    color: #fff;
 
     .well{
         background-color: rgba(0, 0, 0, 0.5);
         border: none;
+
+        a{
+            color: #fff;
+            text-decoration: underline;
+        }
     }
 }
 
-#ovrly-generator{
-    color: #fff;
-}
 .prettyprint{
     overflow: auto;
     word-wrap: normal;
@@ -81,38 +81,57 @@ html, body {
     min-height: 600px;
 }
 
-#page-hello{
-    height: 100%;
-    .ovrly-pixel();
-    margin: 0;
+.heading{
+    padding: 40px 0;
+    margin-bottom: 20px;
     color: #fff;
-    text-shadow: 1px 1px 3px #333;
-    background-image: url('../img/cover.jpg');
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    .lh-background-size(cover);
-    background-attachment: fixed;
+    text-shadow: 1px 1px 3px #666;
 }
 
-#page-getting-started{
-    
+
+#page-hello{
+    height: 100%;
+    margin: 0;
+    color: #fff;
+    text-shadow: 1px 1px 3px #666;
+    background-image: url('../img/cover.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    .lh-background-size(cover);
+    .ovrly-polkadot();
 }
 
 #page-installation{
-    
+    .heading{
+        .ovrly-square(#61B891);
+    }
+}
+
+#page-usage{
+    .heading{
+        .ovrly-sarung(#CC4941);
+    }
+}
+
+#page-patterns{
+    .heading{
+        .ovrly-hexagon(#A5C446);
+    }
+}
+
+#page-contribution{
+    .heading{
+        .ovrly-diamondero(#B11C5E);
+    }
 }
 
 .demo{
     text-align: center;
-    background-image: url('../img/demo.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    .lh-background-size(cover);
     font-family: @font-family-monospace;
     height: 150px;
     line-height: 150px;
     color: #fff;
-    text-shadow: 1px 1px 3px #000;
+    text-shadow: 1px 1px 3px #666;
     margin: 15px 0;
 }
 
@@ -132,63 +151,10 @@ html, body {
     }
 }
 
-.demos{
-    text-align: center;
-    background-image: url('../img/demo.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    .lh-background-size(cover);
-    font-family: @font-family-monospace;
-    height: 200px;
-    line-height: 200px;
-    color: #fff;
-    text-shadow: 1px 1px 3px #000;
-    margin: 15px 0;
-}
-
-.demo-ovrly-pixel{
-    .ovrly-pixel();
-}
-
-.demo-ovrly-horizontal{
-    .ovrly-horizontal();
-}
-
-.demo-ovrly-vertical{
-    .ovrly-vertical();
-}
-
-.demo-ovrly-diagonal-left{
-    .ovrly-diagonal-left();
-}
-
-.demo-ovrly-diagonal-right{
-    .ovrly-diagonal-right();
-}
-
-
-
-.demo-ovrly-pixel-color{
-    .ovrly-diagonal-right(#A192C9);
-}
-
-.demo-ovrly-horizontal-color{
-    .ovrly-horizontal(#583E7E);
-}
-.demo-ovrly-vertical-color{
-    .ovrly-vertical(#00B5F1);
-}
-.demo-ovrly-diagonal-left-color{
-    .ovrly-diagonal-left(#ED5821);
-}
-.demo-ovrly-diagonal-right-color{
-    .ovrly-diagonal-right(#A192C9);
-}
-
 #footer{
     padding: 40px 0;
     background-color: #333;
-    .ovrly-pixel();
+    .ovrly-vertical();
     color: #aaa;
     font-size: 12px;
     text-align: center;

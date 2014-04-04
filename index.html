@@ -31,7 +31,7 @@
 
 				<iframe src="http://ghbtns.com/github-btn.html?user=Kristories&repo=ovrly&type=fork&count=false&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="77" height="30"></iframe>
 
-				<p><a class="btn btn-primary btn-lg" href="#page-getting-started">Learn more &raquo;</a></p>
+				<p><a class="btn btn-primary btn-lg" href="#page-installation">Learn more &raquo;</a></p>
 			</div>
 		</div>
 	</div>
@@ -44,7 +44,6 @@
                     <a class="navbar-brand" href="#page-hello">OVRLY</a>
                 </div>
                 <ul class="nav navbar-nav pull-right">
-                    <li class="active"><a href="#page-getting-started">Getting Started</a></li>
                     <li><a href="#page-installation">Installation</a></li>
                     <li><a href="#page-usage">Usage</a></li>
                     <li><a href="#page-patterns">Patterns</a></li>
@@ -54,62 +53,17 @@
         </div>
     </div>
 </div>
-    <div id="page-getting-started" class="page">
-	<div class="container">
-		
-		<div class="page-header">
-			<h1>Getting Started</h1>
-		</div>
-
-		<div class="row">
-			<div class="col-md-12">
-				
-				<h3>Basic</h3>
-				<div class="row">
-					<div class="col-md-3">
-						<div class="demo demo-ovrly-vertical"></div>
-					</div>
-					<div class="col-md-3">
-						<div class="demo demo-ovrly-horizontal"></div>
-					</div>
-					<div class="col-md-3">
-						<div class="demo demo-ovrly-diagonal-left"></div>
-					</div>
-					<div class="col-md-3">
-						<div class="demo demo-ovrly-diagonal-right"></div>
-					</div>
-				</div>
-
-				<h3>Color</h3>
-				<div class="row">
-					<div class="col-md-3">
-						<div class="demo demo-ovrly-vertical-color"></div>
-					</div>
-					<div class="col-md-3">
-						<div class="demo demo-ovrly-horizontal-color"></div>
-					</div>
-					<div class="col-md-3">
-						<div class="demo demo-ovrly-diagonal-left-color"></div>
-					</div>
-					<div class="col-md-3">
-						<div class="demo demo-ovrly-diagonal-right-color"></div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-		
-	</div>
-</div>
     <div id="page-installation" class="page">
-	<div class="container">
-		<div class="page-header">
+	<div class="heading">
+		<div class="container">
 			<h1>Installation</h1>
 		</div>
+	</div>
+	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
 				<h3>Bower</h3>
-				<p>Make sure you have bower installed or install it via npm <code>install -g bower</code>.</p>
+				<p>Make sure you have bower installed or install it via <a href="https://npmjs.org">npm</a> <code>install -g bower</code>.</p>
 <code>console</code>
 <pre class="prettyprint lang-cli">
 bower install ovrly --save
@@ -132,10 +86,12 @@ bower install ovrly --save
 	</div>
 </div>
     <div id="page-usage" class="page">
-    <div class="container">
-        <div class="page-header">
+    <div class="heading">
+        <div class="container">
             <h1>Usage</h1>
         </div>
+    </div>
+    <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <h3>Using LESS</h3>
@@ -144,11 +100,11 @@ bower install ovrly --save
 <code>less</code>
 <pre class="prettyprint lang-css">
 .foo{
-    .ovrly-pixel();
+    .ovrly-hexagon();
 }
 
 .bar{
-    .ovrly-pixel(#ED5821);
+    .ovrly-hexagon(#ED5821);
 }
 </pre>
 
@@ -173,7 +129,7 @@ bower install ovrly --save
                     <div class="col-md-12">
 <code>html</code>
 <pre class="prettyprint lang-html">
-&lt;div class=&quot;ovrly-pixel&quot;&gt;
+&lt;div class=&quot;ovrly-hexagon&quot;&gt;
     OVRLY
 &lt;/div&gt;
 </pre>
@@ -203,15 +159,17 @@ bower install ovrly --save
             <div class="modal-body">
                 <h3 class="center-block">ovrly.min.css</h3>
                 <pre id="generator-code"></pre>
-            </div>]
+            </div>
         </div>
     </div>
 </div>
     <div id="page-patterns" class="page">
-	<div class="container">
-		<div class="page-header">
-			<h1>Patterns</h1>
+	<div class="heading">
+		<div class="container">
+			<h1>Pattern</h1>
 		</div>
+	</div>
+	<div class="container">
 		<div class="row">
 			<div class="col-md-3">
 				<div class="demo ovrly-horizontal">
@@ -224,30 +182,24 @@ bower install ovrly --save
 				</div>
 			</div>
 			<div class="col-md-3">
-				<div class="demo ovrly-diagonal-left">
-					ovrly-diagonal-left
+				<div class="demo ovrly-polkadot">
+					ovrly-polkadot
 				</div>
 			</div>
 			<div class="col-md-3">
-				<div class="demo ovrly-diagonal-right">
-					ovrly-diagonal-right
+				<div class="demo ovrly-hexagon">
+					ovrly-hexagon
 				</div>
 			</div>
 			<div class="col-md-3">
-				<div class="demo ovrly-pixel">
-					ovrly-pixel
-				</div>
-			</div>
-
-			<div class="col-md-3">
-				<div class="demo ovrly-mozaik">
-					ovrly-mozaik
+				<div class="demo ovrly-square">
+					ovrly-square
 				</div>
 			</div>
 
 			<div class="col-md-3">
-				<div class="demo ovrly-block">
-					ovrly-block
+				<div class="demo ovrly-circle">
+					ovrly-circle
 				</div>
 			</div>
 
@@ -258,40 +210,57 @@ bower install ovrly --save
 			</div>
 
 			<div class="col-md-3">
-				<div class="demo ovrly-polkadot">
-					ovrly-polkadot
+				<div class="demo ovrly-plus">
+					ovrly-plus
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="demo ovrly-diamond">
+					ovrly-diamond
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="demo ovrly-diamondero">
+					ovrly-diamondero
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="demo ovrly-sarung">
+					ovrly-sarung
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-    <div id="page-contribution" class="page">
-    <div class="container">
-        <div class="page-header">
+    <!-- telekinesis -->
+
+<div id="page-contribution" class="page">
+    <div class="heading">
+        <div class="container">
             <h1>Contribution</h1>
         </div>
+    </div>
+    <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                <ul>
-                    <li>Use <strong>OVRLY Generator</strong> to generate your pattern</li>
-                    <li>Use <code>.png</code> format</li>
-                    <li>Maximum <code>.png</code> size <code>100 x 100</code> px</li>
-                    <li>Use opacity up to <code>30%</code></li>
-                </ul>
-
-                <hr>
-
+            <!-- <div class="col-md-6">
                 <h4>Example PNG</h4>
-                <img src="assets/img/example/example.png">
+                <img src="assets/img/example/sarung.png"><br>
+                <i><a href="assets/img/example/sarung.png">sarung.png</a></i>
 
                 <h4>Example PSD</h4>
                 <p>Download <strong><a href="assets/img/example/example.psd">example.psd</a></strong></p>
-            </div>
+            </div> -->
 
-            <div class="col-md-6">
-                <div id="ovrly-generator" class="ovrly-pixel">
-                    <h4>OVRLY Generator</h4>
+            <div class="col-md-6 col-md-offset-3">
+                <div id="ovrly-generator" class="ovrly-plus">
                     <div class="well">
+                        <h4>OVRLY Generator</h4>
+                        <p>
+                            For example, you can download <strong><a href="assets/img/example/example.png">example.png</a></strong>
+                        </p>
                         <form class="form" action="#">
                             <div class="form-group">
                                 <input type="file" class="form-control" id="upload">
@@ -326,7 +295,7 @@ bower install ovrly --save
     <div id="footer">
 	<div class="container">
 		<p>
-			Designed and built by <a href="http://twitter.com/kristories">@kristories</a>. Images by <a href="http://www.flickr.com/photos/epsos/">epsos.de</a><br>
+			Designed and built by <a href="http://twitter.com/kristories">@kristories</a>. Cover by <a href="http://www.flickr.com/photos/epsos/">epsos.de</a><br>
 			Code licensed under <a href="https://github.com/Kristories/ovrly/blob/master/LICENSE.md">MIT License</a>.
 		</p>
 	</div>
