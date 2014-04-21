@@ -1,0 +1,19 @@
+{
+  "name": "mjaalnir-bootstrap-colorpicker",
+  "version": "1.0.0",
+  "dependencies": {
+    "jquery": "~1.10.2",
+    "bootstrap": "~3.0.2"
+  },
+  "homepage": "https://github.com/mjolnic/bootstrap-colorpicker",
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.0",
+    "commit": "36dc4557e884939e11ab5028eee7656e480cd9e3"
+  },
+  "_source": "git://github.com/mjolnic/bootstrap-colorpicker.git",
+  "_target": "~1.0.0",
+  "_originalSource": "mjolnic-bootstrap-colorpicker",
+  "_direct": true
+}

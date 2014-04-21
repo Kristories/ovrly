@@ -1,1 +1,0 @@
-# [OVRLY](http://kristories.github.io/ovrly)
