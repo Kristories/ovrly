@@ -1,0 +1,4 @@
+/config.codekit
+/assets/vendor/*
+/assets/vendor/fontawesome/*
+!/assets/vendor/fontawesome/fonts
