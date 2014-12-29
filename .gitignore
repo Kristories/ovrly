@@ -2,3 +2,5 @@
 /assets/vendor/*
 /assets/vendor/fontawesome/*
 !/assets/vendor/fontawesome/fonts
+/assets/vendor/minicolors/*
+!/assets/vendor/minicolors/jquery.minicolors.css
