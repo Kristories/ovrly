@@ -7,6 +7,32 @@ Overlaying images with CSS
 [http://kristories.github.io/ovrly](http://kristories.github.io/ovrly)
 
 
+### Usage
+
+**LESS**
+
+    .ovrly-PATTERN(@color); // Default color #333333
+    
+**CSS**
+
+    <div class="ovrly-TYPE"></div>
+    
+**Pattern**
+
+- `ovrly-horizontal`
+- `ovrly-vertical`
+- `ovrly-diagonal-left`
+- `ovrly-diagonal-righ`
+- `ovrly-pixel`
+- `ovrly-zigzag-horizontal`
+- `ovrly-zigzag-vertical`
+- `ovrly-snake`
+- `ovrly-batik`
+- `ovrly-galaxy`
+- `ovrly-apolo`
+- `ovrly-skull`
+
+
 ### License
 
 MIT
