@@ -37,6 +37,6 @@ Overlaying images with CSS
 
 MIT
 
-### Cover
+### Credit
 
 Cover by [werner22brigitte](http://pixabay.com/en/users/werner22brigitte-5337/) - [Mount Merapi](http://pixabay.com/en/mount-merapi-volcano-indonesia-lava-113620/)
