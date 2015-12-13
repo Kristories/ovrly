@@ -1,10 +1,11 @@
 {
   "name": "ovrly",
   "description": "Overlaying images with CSS",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "main": [
     "css",
-    "less"
+    "less",
+    "sass"
   ],
   "license": "MIT",
   "keywords": [
