@@ -1,29 +1,21 @@
-# ovrly
+# [{ ovrly }](http://kristories.github.io/ovrly)
 
 Overlaying images with CSS
-
-### Demo
-
-[http://kristories.github.io/ovrly](http://kristories.github.io/ovrly)
 
 
 ### Usage
 
-**LESS**
+```html
+<div class="ovrly ovrly-TYPE"></div>
+```
 
-    .ovrly-PATTERN(@color); // Default color #333333
-    
-**CSS**
+**Pattern type**
 
-    <div class="ovrly-TYPE"></div>
-    
-**Pattern**
-
+- `ovrly-pixel`
 - `ovrly-horizontal`
 - `ovrly-vertical`
 - `ovrly-diagonal-left`
 - `ovrly-diagonal-righ`
-- `ovrly-pixel`
 - `ovrly-zigzag-horizontal`
 - `ovrly-zigzag-vertical`
 - `ovrly-snake`
@@ -36,7 +28,3 @@ Overlaying images with CSS
 ### License
 
 MIT
-
-### Credit
-
-Cover by [werner22brigitte](http://pixabay.com/en/users/werner22brigitte-5337/) - [Mount Merapi](http://pixabay.com/en/mount-merapi-volcano-indonesia-lava-113620/)
