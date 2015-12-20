@@ -15,11 +15,27 @@ $ovrly-skull                : 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAk
 
 
 /************************ BASE ************************/
-.ovrly{
+@mixin ovrly($pattern: '', $color: $color) {
     position: relative;
     z-index: 1;
 
     &:after{
+        @if $pattern != '' {
+            @if $pattern == 'pixel'             { background-image: url($ovrly-pixel); }
+            @if $pattern == 'horizontal'        { background-image: url($ovrly-horizontal); }
+            @if $pattern == 'vertical'          { background-image: url($ovrly-vertical); }
+            @if $pattern == 'diagonal-left'     { background-image: url($ovrly-diagonal-left); }
+            @if $pattern == 'diagonal-right'    { background-image: url($ovrly-diagonal-right); }
+            @if $pattern == 'zigzag-horizontal' { background-image: url($ovrly-zigzag-horizontal); }
+            @if $pattern == 'zigzag-vertical'   { background-image: url($ovrly-zigzag-vertical); }
+            @if $pattern == 'snake'             { background-image: url($ovrly-snake); }
+            @if $pattern == 'batik'             { background-image: url($ovrly-batik); }
+            @if $pattern == 'galaxy'            { background-image: url($ovrly-galaxy); }
+            @if $pattern == 'apolo'             { background-image: url($ovrly-apolo); }
+            @if $pattern == 'skull'             { background-image: url($ovrly-skull); }
+            background-repeat: repeat;
+        }
+
         content: "";
         position: absolute;
         top: 0;
@@ -27,20 +43,19 @@ $ovrly-skull                : 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAk
         bottom: 0;
         right: 0;
         z-index: -1;
-        background-repeat: repeat;
         background-color: rgba(red($color), green($color), blue($color), .6);
     }
-
-    &.ovrly-pixel:after             { background-image: url($ovrly-pixel); }
-    &.ovrly-horizontal:after        { background-image: url($ovrly-horizontal); }
-    &.ovrly-vertical:after          { background-image: url($ovrly-vertical); }
-    &.ovrly-diagonal-left:after     { background-image: url($ovrly-diagonal-left); }
-    &.ovrly-diagonal-right:after    { background-image: url($ovrly-diagonal-right); }
-    &.ovrly-zigzag-horizontal:after { background-image: url($ovrly-zigzag-horizontal); }
-    &.ovrly-zigzag-vertical:after   { background-image: url($ovrly-zigzag-vertical); }
-    &.ovrly-snake:after             { background-image: url($ovrly-snake); }
-    &.ovrly-batik:after             { background-image: url($ovrly-batik); }
-    &.ovrly-galaxy:after            { background-image: url($ovrly-galaxy); }
-    &.ovrly-apolo:after             { background-image: url($ovrly-apolo); }
-    &.ovrly-skull:after             { background-image: url($ovrly-skull); }
 }
+
+.ovrly-pixel                { @include ovrly('pixel'); }
+.ovrly-horizontal           { @include ovrly('horizontal'); }
+.ovrly-vertical             { @include ovrly('vertical'); }
+.ovrly-diagonal-left        { @include ovrly('diagonal-left'); }
+.ovrly-diagonal-right       { @include ovrly('diagonal-right'); }
+.ovrly-zigzag-horizontal    { @include ovrly('zigzag-horizontal'); }
+.ovrly-zigzag-vertical      { @include ovrly('zigzag-vertical'); }
+.ovrly-snake                { @include ovrly('snake'); }
+.ovrly-batik                { @include ovrly('batik'); }
+.ovrly-galaxy               { @include ovrly('galaxy'); }
+.ovrly-apolo                { @include ovrly('apolo'); }
+.ovrly-skull                { @include ovrly('skull'); }
