@@ -15,11 +15,16 @@
 
 
 /************************ BASE ************************/
-.ovrly{
+.ovrly(@pattern: '', @color: @color){
     position: relative;
     z-index: 1;
 
     &:after{
+        & when(@pattern > ''){
+            background-image: url(~'@{ovrly-@{pattern}}');
+            background-repeat: repeat;
+        }
+
         content: "";
         position: absolute;
         top: 0;
@@ -27,20 +32,19 @@
         bottom: 0;
         right: 0;
         z-index: -1;
-        background-repeat: repeat;
         background-color: rgba(red(@color), green(@color), blue(@color), .6);
     }
-
-    &.ovrly-pixel:after             { background-image: url(@ovrly-pixel); }
-    &.ovrly-horizontal:after        { background-image: url(@ovrly-horizontal); }
-    &.ovrly-vertical:after          { background-image: url(@ovrly-vertical); }
-    &.ovrly-diagonal-left:after     { background-image: url(@ovrly-diagonal-left); }
-    &.ovrly-diagonal-right:after    { background-image: url(@ovrly-diagonal-right); }
-    &.ovrly-zigzag-horizontal:after { background-image: url(@ovrly-zigzag-horizontal); }
-    &.ovrly-zigzag-vertical:after   { background-image: url(@ovrly-zigzag-vertical); }
-    &.ovrly-snake:after             { background-image: url(@ovrly-snake); }
-    &.ovrly-batik:after             { background-image: url(@ovrly-batik); }
-    &.ovrly-galaxy:after            { background-image: url(@ovrly-galaxy); }
-    &.ovrly-apolo:after             { background-image: url(@ovrly-apolo); }
-    &.ovrly-skull:after             { background-image: url(@ovrly-skull); }
 }
+
+.ovrly-pixel                { .ovrly('pixel'); }
+.ovrly-horizontal           { .ovrly('horizontal'); }
+.ovrly-vertical             { .ovrly('vertical'); }
+.ovrly-diagonal-left        { .ovrly('diagonal-left'); }
+.ovrly-diagonal-right       { .ovrly('diagonal-right'); }
+.ovrly-zigzag-horizontal    { .ovrly('zigzag-horizontal'); }
+.ovrly-zigzag-vertical      { .ovrly('zigzag-vertical'); }
+.ovrly-snake                { .ovrly('snake'); }
+.ovrly-batik                { .ovrly('batik'); }
+.ovrly-galaxy               { .ovrly('galaxy'); }
+.ovrly-apolo                { .ovrly('apolo'); }
+.ovrly-skull                { .ovrly('skull'); }

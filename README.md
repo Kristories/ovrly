@@ -3,13 +3,57 @@
 Overlaying images with CSS
 
 
-### Usage
+## Usage
 
-```html
-<div class="ovrly ovrly-TYPE"></div>
+#### LESS
+
+```less
+.target-a{
+    .ovrly('pixel'); // Default color #333
+}
+
+.target-b{
+    .ovrly('batik', red);
+}
+
+.target-c{
+    .ovrly('galaxy', #333);
+}
 ```
 
-**Pattern type**
+#### SASS
+
+```sass
+.target-a{
+    @include ovrly('pixel'); // Default color #333
+}
+
+.target-b{
+    @include ovrly('batik', red);
+}
+
+.target-c{
+    @include ovrly('galaxy', #333);
+}
+```
+
+#### CSS
+
+```html
+<div class="ovrly-pixel"></div>
+```
+
+Default `background-color` is `#333`. You can change `background-color` with this method :
+
+```css
+/* Default color #333 */
+.ovrly-pixel:after{
+    background-color: rgba(255, 255, 255, .6); /* Change color */
+}
+```
+
+
+## Pattern type
 
 - `ovrly-pixel`
 - `ovrly-horizontal`
@@ -25,6 +69,6 @@ Overlaying images with CSS
 - `ovrly-skull`
 
 
-### License
+## License
 
 MIT
