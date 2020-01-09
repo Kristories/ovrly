@@ -1,4 +1,4 @@
-# [{ ovrly }](http://kristories.github.io/ovrly)
+# { ovrly }
 
 Overlaying images with CSS
 
